@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;900&family=Tajawal:wght@300;400;500;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Cairo", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Tajawal", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-sg-green: var(--sg-green);
+  --color-sg-dark-green: var(--sg-dark-green);
+  --color-sg-blue: var(--sg-blue);
+  --color-sg-light-blue: var(--sg-light-blue);
+  --color-sg-amber: var(--sg-amber);
+  --color-sg-red: var(--sg-red);
+  --color-sg-dark: var(--sg-dark);
+  --color-sg-dark-2: var(--sg-dark-2);
+  --color-sg-dark-3: var(--sg-dark-3);
+  --color-sg-gray: var(--sg-gray);
+  --color-sg-gray-light: var(--sg-gray-light);
+}
+
+:root {
+  --sg-green: #00C896;
+  --sg-dark-green: #00956F;
+  --sg-blue: #0A4B78;
+  --sg-light-blue: #5BBBFF;
+  --sg-amber: #F5A623;
+  --sg-red: #E84545;
+  --sg-dark: #0D1117;
+  --sg-dark-2: #161B22;
+  --sg-dark-3: #21262D;
+  --sg-gray: #8B949E;
+  --sg-gray-light: #C9D1D9;
+  --text-main: #F0F6FC;
+  --glass-bg: rgba(13, 17, 23, 0.75);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-shadow: rgba(0, 0, 0, 0.3);
+}
+
+:root.light {
+  --sg-green: #00A37A;
+  --sg-dark-green: #007A5A;
+  --sg-blue: #0A4B78;
+  --sg-light-blue: #0077CC;
+  --sg-amber: #D97706;
+  --sg-red: #DC2626;
+  --sg-dark: #F3F4F6;
+  --sg-dark-2: #FFFFFF;
+  --sg-dark-3: #E5E7EB;
+  --sg-gray: #6B7280;
+  --sg-gray-light: #374151;
+  --text-main: #111827;
+  --glass-bg: rgba(255, 255, 255, 0.85);
+  --glass-border: rgba(0, 0, 0, 0.1);
+  --glass-shadow: rgba(0, 0, 0, 0.1);
+}
+
+body {
+  background-color: var(--sg-dark);
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Custom Scrollbar for the UI panels */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--sg-dark-2);
+  opacity: 0.5;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--sg-green);
+  border-radius: 3px;
+}
+
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 8px 32px 0 var(--glass-shadow);
+  transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
