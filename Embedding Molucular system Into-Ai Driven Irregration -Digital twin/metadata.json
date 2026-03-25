@@ -1,0 +1,8 @@
+{
+  "name": "Phyto-Sense",
+  "description": "Embedding Molecular Intelligence into AI-Driven Irrigation. A futuristic presentation platform with integrated Gemini AI tools for smart agriculture.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
